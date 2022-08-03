@@ -1,0 +1,13 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract MyNewContract {
+
+    //Arrays 
+    uint[] public uintArray = [1, 2, 3];
+    //tell it the type of data inside the array(uint) then add square brackets. ie. uint[]
+    string[] public stringArray = ["apple", "banana", "orange", "zuchinni"];
+    string[] public values;
+    uint256[] [] public array2D = [[1, 2, 3], [4, 5, 6]];
+    
+}
