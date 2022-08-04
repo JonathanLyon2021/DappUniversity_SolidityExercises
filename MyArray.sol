@@ -8,5 +8,10 @@ contract NewArray{
     function addValue(string memory _value) public {
         FamilyArray.push(_value);
     }
-    
+
+    function valueCount() public view returns(uint) {
+        return FamilyArray.length;
+    }
+
 }
+
