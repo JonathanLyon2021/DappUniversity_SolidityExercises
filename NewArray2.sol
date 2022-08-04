@@ -9,4 +9,7 @@ contract MyArray2 {
         uintArray.push(_value);
     }
     
+     function valueCount() public view returns(uint) {
+        return uintArray.length;
+    }
 }
