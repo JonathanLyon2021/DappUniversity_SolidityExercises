@@ -6,5 +6,10 @@ contract MyContract {
     //mapping(key => value)
     mapping(uint => string) names;
 
-    
+    constructor() public {
+        names[1] = "Adam";
+        names[2] = "Bruce";
+        names[3] = "Carl";
+    }
+
 }
