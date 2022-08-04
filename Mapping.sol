@@ -6,6 +6,7 @@ contract MyContract {
     //mapping(key => value)
     mapping(uint => string) names;
     mapping(uint => Book) public books;
+    mapping(address => mapping(uint => Book)) public myBooks;
 
     struct Book {
         string title;
@@ -20,6 +21,10 @@ contract MyContract {
 
     function addBook(uint _id, string memory _title, string memory _author) public {
         books[_id] = Book(_title, _author);
+    }
+
+     function addMyBook(uint _id, string memory _title, string memory _author) public {
+        myBooks[msg.sender][_id] = Book(_title, _author);
     }
 
 }
