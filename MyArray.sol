@@ -2,5 +2,11 @@
 pragma solidity ^0.8.0;
 
 contract NewArray{
-    uint public MyArray = ["Jonathan", "Jessica", "Buggie"];
+    //New Array
+    string[] public FamilyArray = ["Jonathan", "Jessica", "Buggie"];
+
+    function addValue(string memory _value) public {
+        FamilyArray.push(_value);
+    }
+    
 }
