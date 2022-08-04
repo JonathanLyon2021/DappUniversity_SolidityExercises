@@ -5,6 +5,7 @@ contract MyContract {
     //Mappings
     //mapping(key => value)
     mapping(uint => string) names;
+    mapping(uint => Book) public books;
 
     struct Book {
         string title;
@@ -15,6 +16,10 @@ contract MyContract {
         names[1] = "Adam";
         names[2] = "Bruce";
         names[3] = "Carl";
+    }
+
+    function addBook(uint _id, string memory _title, string memory _author) public {
+        books[_id] = Book(_title, _author);
     }
 
 }
