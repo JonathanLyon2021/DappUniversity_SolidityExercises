@@ -29,4 +29,9 @@ contract HotelRoom {
     
      function book() public payable onlyWhileVacant costs(2 ether) {
         currentStatus = Statuses.Occupied;
+        
+        (bool sent, bytes memory data) = owner.call{value: msg.value}("");
+        require(sent);
+        
+    }
 }
