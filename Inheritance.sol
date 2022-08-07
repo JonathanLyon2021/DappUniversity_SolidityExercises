@@ -35,5 +35,8 @@ contract Secret is Ownable {
         secretVault = address(_secretVault);
         super;
     }
+     function getSecret() public view onlyOwner returns (string memory) {
+        return SecretVault(secretVault).getSecret();
+    }
 }
 
