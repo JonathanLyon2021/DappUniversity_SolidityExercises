@@ -26,4 +26,7 @@ contract HotelRoom {
         require(msg.value >= _amount, "Not enough Ether provided.");
         _;
     }
+    
+     function book() public payable onlyWhileVacant costs(2 ether) {
+        currentStatus = Statuses.Occupied;
 }
