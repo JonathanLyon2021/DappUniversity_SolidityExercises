@@ -9,4 +9,5 @@ contract HotelRoom {
     }
     Statuses public currentStatus;
 
+    event Occupy(address _occupant, uint256 _value);
 }
