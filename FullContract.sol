@@ -22,4 +22,8 @@ contract HotelRoom {
         require(currentStatus == Statuses.Vacant, "Currently occupied.");
         _;
     }
+     modifier costs(uint256 _amount) {
+        require(msg.value >= _amount, "Not enough Ether provided.");
+        _;
+    }
 }
