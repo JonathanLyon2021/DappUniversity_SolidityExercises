@@ -7,5 +7,6 @@ contract HotelRoom {
         Vacant,
         Occupied
     }
-    
+    Statuses public currentStatus;
+
 }
