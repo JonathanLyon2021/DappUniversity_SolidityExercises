@@ -17,4 +17,9 @@ contract HotelRoom {
         owner = payable(msg.sender);
         currentStatus = Statuses.Vacant;
     }
+    
+    modifier onlyWhileVacant() {
+        require(currentStatus == Statuses.Vacant, "Currently occupied.");
+        _;
+    }
 }
