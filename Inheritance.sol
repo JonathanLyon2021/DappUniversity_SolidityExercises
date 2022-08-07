@@ -15,3 +15,12 @@ contract Ownable {
         _;
     }
 }
+
+contract SecretVault {
+    string secret;
+
+    constructor(string memory _secret) {
+        secret = _secret;
+    }
+    
+}
