@@ -10,4 +10,11 @@ contract HotelRoom {
     Statuses public currentStatus;
 
     event Occupy(address _occupant, uint256 _value);
+    
+     address payable public owner;
+
+    constructor() {
+        owner = payable(msg.sender);
+        currentStatus = Statuses.Vacant;
+    }
 }
