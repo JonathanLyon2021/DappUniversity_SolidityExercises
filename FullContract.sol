@@ -33,5 +33,6 @@ contract HotelRoom {
         (bool sent, bytes memory data) = owner.call{value: msg.value}("");
         require(sent);
         
+        emit Occupy(msg.sender, msg.value);
     }
 }
