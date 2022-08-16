@@ -24,4 +24,7 @@ contract SecretVault {
         secret = _secret;
     }
 
+    function getSecret() public view returns (string memory) {
+        return secret;
+    }
 }
