@@ -15,3 +15,9 @@ contract Ownable {
         _;
     }
 }
+
+
+contract SecretVault {
+    string secret;
+    
+}
