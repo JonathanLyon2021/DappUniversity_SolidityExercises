@@ -38,4 +38,7 @@ contract Secret is Ownable {
         super;
     }
 
+     function getSecret() public view onlyOwner returns (string memory) {
+        return SecretVault(secretVault).getSecret();
+    }
 }
