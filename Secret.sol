@@ -28,3 +28,8 @@ contract SecretVault {
         return secret;
     }
 }
+
+contract Secret is Ownable {
+    address secretVault;
+    
+}
