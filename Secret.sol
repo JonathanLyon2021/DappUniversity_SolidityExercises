@@ -32,4 +32,10 @@ contract SecretVault {
 contract Secret is Ownable {
     address secretVault;
     
+     constructor(string memory _secret) {
+        SecretVault _secretVault = new SecretVault(_secret);
+        secretVault = address(_secretVault);
+        super;
+    }
+
 }
