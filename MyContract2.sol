@@ -6,4 +6,9 @@ contract MyContract {
     constructor() public {
         value = "myValue";
     }
+
+    function get() public view returns(string) {
+        return value;
+    }
 }
+
